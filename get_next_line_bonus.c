@@ -6,7 +6,7 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 12:12:37 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/05/13 16:34:36 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/05/13 18:11:36 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*get_stash(int fd, char *buf_read, char	*stash)
 		free (temp);
 		if (!stash)
 			return (NULL);
-		if (ft_strchr(stash, '\n'))			
+		if (ft_strchr(stash, '\n'))
 			break ;
 	}
 	return (stash);

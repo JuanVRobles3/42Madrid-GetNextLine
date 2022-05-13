@@ -6,7 +6,7 @@
 /*   By: jrobles- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 11:42:14 by jrobles-          #+#    #+#             */
-/*   Updated: 2022/05/12 11:43:06 by jrobles-         ###   ########.fr       */
+/*   Updated: 2022/05/13 18:10:55 by jrobles-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*get_stash(int fd, char *buf_read, char	*stash)
 		free (temp);
 		if (!stash)
 			return (NULL);
-		if (ft_strchr(stash, '\n'))			//si encuentro un salto de linea paro, e imprimo
+		if (ft_strchr(stash, '\n'))
 			break ;
 	}
 	return (stash);
@@ -70,7 +70,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	buf_read = get_buf_read();
 	if (rest)
-		stash = rest;				//la segunda vez que lo llamo, en stash voy a guardar el resto y volveré a hacer lo mismo
+		stash = rest;
 	else
 		stash = ft_calloc(1, sizeof(char));
 	stash = get_stash(fd, buf_read, stash);
